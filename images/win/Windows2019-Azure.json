@@ -121,12 +121,6 @@
         {
             "type": "powershell",
             "scripts":[
-                "{{ template_dir }}/scripts/Installers/Install-Docker.ps1"
-            ]
-        },
-        {
-            "type": "powershell",
-            "scripts":[
                 "{{ template_dir }}/scripts/Installers/Install-PowershellCore.ps1"
             ]
         },
@@ -137,19 +131,7 @@
         {
             "type": "powershell",
             "scripts":[
-                "{{ template_dir }}/scripts/Installers/Validate-Docker.ps1"
-            ]
-        },
-        {
-            "type": "powershell",
-            "scripts":[
                 "{{ template_dir }}/scripts/Installers/Validate-PowershellCore.ps1"
-            ]
-        },
-        {
-            "type": "powershell",
-            "scripts":[
-                "{{ template_dir }}/scripts/Installers/Windows2019/Update-DockerImages.ps1"
             ]
         },
         {
@@ -172,12 +154,6 @@
         },
         {
             "type": "powershell",
-            "scripts":[
-                "{{ template_dir }}/scripts/Installers/Windows2019/Install-Wix.ps1"
-            ]
-        },
-        {
-            "type": "powershell",
             "valid_exit_codes": [
                 0,
                 3010
@@ -195,12 +171,6 @@
         {
             "type": "windows-restart",
             "restart_timeout": "10m"
-        },
-        {
-            "type": "powershell",
-            "scripts":[
-                "{{ template_dir }}/scripts/Installers/Windows2019/Validate-Wix.ps1"
-            ]
         },
         {
             "type": "powershell",
@@ -245,12 +215,6 @@
             ]
         },
         {
-            "type": "powershell",
-            "scripts":[
-                "{{ template_dir }}/scripts/Installers/Install-7zip.ps1"
-            ]
-        },
-        {
             "type": "file",
             "source": "{{template_dir}}/toolcache-2019.json",
             "destination": "{{user `root_folder`}}/toolcache.json"
@@ -279,24 +243,8 @@
         },
         {
             "type": "powershell",
-            "environment_vars": [
-                "GO_VERSIONS=1.10.8,1.11.12,1.12.7,1.13",
-                "GO_DEFAULT=1.12.7"
-            ],
-            "scripts":[
-                "{{ template_dir }}/scripts/Installers/Install-Go.ps1"
-            ]
-        },
-         {
-            "type": "powershell",
             "scripts":[
                 "{{ template_dir }}/scripts/Installers/Install-PHP.ps1"
-            ]
-        },
-        {
-            "type": "powershell",
-            "scripts":[
-                "{{ template_dir }}/scripts/Installers/Install-Ruby.ps1"
             ]
         },
         {
@@ -309,12 +257,6 @@
             "type": "powershell",
             "scripts":[
                 "{{ template_dir }}/scripts/Installers/Install-Sbt.ps1"
-            ]
-        },
-        {
-            "type": "powershell",
-            "scripts":[
-                "{{ template_dir }}/scripts/Installers/Install-Svn.ps1"
             ]
         },
         {
@@ -376,31 +318,7 @@
         {
             "type": "powershell",
             "scripts":[
-                "{{ template_dir }}/scripts/Installers/Install-JavaTools.ps1"
-            ]
-        },
-        {
-            "type": "powershell",
-            "scripts":[
-                "{{ template_dir }}/scripts/Installers/Install-Cmake.ps1"
-            ]
-        },
-        {
-            "type": "powershell",
-            "scripts":[
                 "{{ template_dir }}/scripts/Installers/Install-DACFx.ps1"
-            ]
-        },
-        {
-            "type": "powershell",
-            "scripts":[
-                "{{ template_dir }}/scripts/Installers/Update-AndroidSDK.ps1"
-            ]
-        },
-        {
-            "type": "powershell",
-            "scripts":[
-                "{{ template_dir }}/scripts/Installers/Install-MysqlCli.ps1"
             ]
         },
         {
@@ -447,28 +365,6 @@
             "type": "powershell",
             "scripts":[
                 "{{ template_dir }}/scripts/Installers/Install-Miniconda.ps1"
-            ]
-        },
-        {
-            "type": "powershell",
-            "scripts":[
-                "{{ template_dir }}/scripts/Installers/Install-AzureCosmosDbEmulator.ps1"
-            ]
-        },
-        {
-            "type": "powershell",
-            "environment_vars": [
-                "BOOST_VERSIONS=1.69.0,1.72.0",
-                "BOOST_DEFAULT=1.72.0"
-            ],
-            "scripts":[
-                "{{ template_dir }}/scripts/Installers/Install-Boost.ps1"
-            ]
-        },
-        {
-            "type": "powershell",
-            "scripts":[
-                "{{ template_dir }}/scripts/Installers/Install-Mercurial.ps1"
             ]
         },
         {
